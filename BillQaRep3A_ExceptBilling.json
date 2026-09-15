@@ -1,0 +1,1413 @@
+{
+  "Name": "BillQaRep3A_ExceptBilling",
+  "Databases": [
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "Billing_Datamart",
+      "SizeMB": 305128.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00325",
+          "Title": "ORDER BY specifies integer ordinal",
+          "Impact": "This rule checks stored procedures, functions, views and triggers for use of ORDER BY clause specifying ordinal column numbers as sort columns. A sort column can be specified as a nonnegative integer representing the position of the name or alias in the select list, but this is not recommended. An integer cannot be specified when the order_by_expression appears in a ranking function. A sort column can include an expression, but when the database is in SQL 90 compatibility mode or higher, the expression cannot resolve to a constant.",
+          "Recommendation": "Specify the sort column as a name or column alias rather than hard coding the ordinal.",
+          "MoreInfo": "Bad habits to kick : ORDER BY ordinal (https://aka.ms/order-by-integer) \nDISCLAIMER: Third-party link provided as-is and Microsoft does not offer any guarantees or warranties regarding the content on the third party site.",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportDailyChecks",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 113, Column 2.\n Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 127, Column 3.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Teams",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Teams] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 42, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Years",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Years] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 43, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00325",
+          "Title": "ORDER BY specifies integer ordinal",
+          "Impact": "This rule checks stored procedures, functions, views and triggers for use of ORDER BY clause specifying ordinal column numbers as sort columns. A sort column can be specified as a nonnegative integer representing the position of the name or alias in the select list, but this is not recommended. An integer cannot be specified when the order_by_expression appears in a ranking function. A sort column can include an expression, but when the database is in SQL 90 compatibility mode or higher, the expression cannot resolve to a constant.",
+          "Recommendation": "Specify the sort column as a name or column alias rather than hard coding the ordinal.",
+          "MoreInfo": "Bad habits to kick : ORDER BY ordinal (https://aka.ms/order-by-integer) \nDISCLAIMER: Third-party link provided as-is and Microsoft does not offer any guarantees or warranties regarding the content on the third party site.",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportDailyChecks",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 113, Column 2.\n Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 127, Column 3.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Teams",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Teams] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 42, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Years",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Years] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 43, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00325",
+          "Title": "ORDER BY specifies integer ordinal",
+          "Impact": "This rule checks stored procedures, functions, views and triggers for use of ORDER BY clause specifying ordinal column numbers as sort columns. A sort column can be specified as a nonnegative integer representing the position of the name or alias in the select list, but this is not recommended. An integer cannot be specified when the order_by_expression appears in a ranking function. A sort column can include an expression, but when the database is in SQL 90 compatibility mode or higher, the expression cannot resolve to a constant.",
+          "Recommendation": "Specify the sort column as a name or column alias rather than hard coding the ordinal.",
+          "MoreInfo": "Bad habits to kick : ORDER BY ordinal (https://aka.ms/order-by-integer) \nDISCLAIMER: Third-party link provided as-is and Microsoft does not offer any guarantees or warranties regarding the content on the third party site.",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportDailyChecks",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 113, Column 2.\n Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 127, Column 3.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Teams",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Teams] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 42, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Years",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Years] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 43, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00325",
+          "Title": "ORDER BY specifies integer ordinal",
+          "Impact": "This rule checks stored procedures, functions, views and triggers for use of ORDER BY clause specifying ordinal column numbers as sort columns. A sort column can be specified as a nonnegative integer representing the position of the name or alias in the select list, but this is not recommended. An integer cannot be specified when the order_by_expression appears in a ranking function. A sort column can include an expression, but when the database is in SQL 90 compatibility mode or higher, the expression cannot resolve to a constant.",
+          "Recommendation": "Specify the sort column as a name or column alias rather than hard coding the ordinal.",
+          "MoreInfo": "Bad habits to kick : ORDER BY ordinal (https://aka.ms/order-by-integer) \nDISCLAIMER: Third-party link provided as-is and Microsoft does not offer any guarantees or warranties regarding the content on the third party site.",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportDailyChecks",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 113, Column 2.\n Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 127, Column 3.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Teams",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Teams] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 42, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Years",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Years] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 43, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00325",
+          "Title": "ORDER BY specifies integer ordinal",
+          "Impact": "This rule checks stored procedures, functions, views and triggers for use of ORDER BY clause specifying ordinal column numbers as sort columns. A sort column can be specified as a nonnegative integer representing the position of the name or alias in the select list, but this is not recommended. An integer cannot be specified when the order_by_expression appears in a ranking function. A sort column can include an expression, but when the database is in SQL 90 compatibility mode or higher, the expression cannot resolve to a constant.",
+          "Recommendation": "Specify the sort column as a name or column alias rather than hard coding the ordinal.",
+          "MoreInfo": "Bad habits to kick : ORDER BY ordinal (https://aka.ms/order-by-integer) \nDISCLAIMER: Third-party link provided as-is and Microsoft does not offer any guarantees or warranties regarding the content on the third party site.",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportDailyChecks",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 113, Column 2.\n Object [dbo].[usp_ReportDailyChecks] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 127, Column 3.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Teams",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Teams] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 42, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_RS_CustomerVoice_Dashboard_Report_Years",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_RS_CustomerVoice_Dashboard_Report_Years] uses ORDER BY clause specifiying ordinal column numbers as sort columns, this is not supported in database compatibility level 90 and higher. For more details, please see: Line 43, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportErrorSummaryDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportErrorSummaryDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 58, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportexceptionReports",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportexceptionReports] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 55, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 64, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsSummary",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsSummary] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 63, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_reportVoidsByDemolishedProperties",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_reportVoidsByDemolishedProperties] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 29, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_new_report_table",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_new_report_table] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3108, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_rpt_CMEX_2022",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_rpt_CMEX_2022] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3764, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportErrorSummaryDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportErrorSummaryDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 58, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportexceptionReports",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportexceptionReports] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 55, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 64, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsSummary",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsSummary] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 63, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_reportVoidsByDemolishedProperties",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_reportVoidsByDemolishedProperties] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 29, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_new_report_table",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_new_report_table] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3108, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_rpt_CMEX_2022",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_rpt_CMEX_2022] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3764, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportErrorSummaryDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportErrorSummaryDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 58, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportexceptionReports",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportexceptionReports] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 55, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 64, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsSummary",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsSummary] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 63, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_reportVoidsByDemolishedProperties",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_reportVoidsByDemolishedProperties] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 29, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_new_report_table",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_new_report_table] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3108, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_rpt_CMEX_2022",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_rpt_CMEX_2022] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3764, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportErrorSummaryDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportErrorSummaryDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 58, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportexceptionReports",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportexceptionReports] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 55, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 64, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsSummary",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsSummary] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 63, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_reportVoidsByDemolishedProperties",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_reportVoidsByDemolishedProperties] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 29, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_new_report_table",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_new_report_table] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3108, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_rpt_CMEX_2022",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_rpt_CMEX_2022] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3764, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_ReportErrorSummaryDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportErrorSummaryDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 58, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportexceptionReports",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportexceptionReports] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 55, Column 53.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsDetail",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsDetail] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 64, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_ReportMeasuredSpattsSummary",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_ReportMeasuredSpattsSummary] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 63, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_reportVoidsByDemolishedProperties",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_reportVoidsByDemolishedProperties] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 29, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_new_report_table",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_new_report_table] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3108, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.usp_sim_populate_rpt_CMEX_2022",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_sim_populate_rpt_CMEX_2022] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3764, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_AuditRecord",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_AuditRecord uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_Message",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_Message uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 5, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_AuditRecord",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_AuditRecord uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_Message",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_Message uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 5, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_AuditRecord",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_AuditRecord uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_Message",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_Message uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 5, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_AuditRecord",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_AuditRecord uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_Message",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_Message uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 5, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_AuditRecord",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_AuditRecord uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.temp_Send286WithUSRN_Messages.t_Message",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.temp_Send286WithUSRN_Messages.t_Message uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 5, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "Billing_Reporting",
+      "SizeMB": 575320.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "CaseManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "CaseManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "CaseManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "CaseManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "CaseManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "CaseManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "CaseManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "CaseManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "CaseManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "CaseManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [CaseManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\CaseManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.YWAF_log.FormattedMessage",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_log.FormattedMessage uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 16, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.YWAF_request_response_log.response",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_request_response_log.response uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.YWAF_log.FormattedMessage",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_log.FormattedMessage uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 16, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.YWAF_request_response_log.response",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_request_response_log.response uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.YWAF_log.FormattedMessage",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_log.FormattedMessage uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 16, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.YWAF_request_response_log.response",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_request_response_log.response uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.YWAF_log.FormattedMessage",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_log.FormattedMessage uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 16, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.YWAF_request_response_log.response",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_request_response_log.response uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "Information",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00306",
+          "Title": "Deprecated data types TEXT, IMAGE or NTEXT",
+          "Impact": "These data types are checked as deprecated. In some cases, using TEXT, IMAGE or NTEXT might harm performance.",
+          "Recommendation": "Deprecated data types are marked to be discontinued on next versions of SQL Server, should use new data types such as: (varchar(max), nvarchar(max), varbinary(max) and etc.)",
+          "MoreInfo": "ntext, text, and image (Transact-SQL) (https://go.microsoft.com/fwlink/?LinkId=798558)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.YWAF_log.FormattedMessage",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_log.FormattedMessage uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 16, Column 5.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "dbo.YWAF_request_response_log.response",
+              "ObjectType": "Column",
+              "ImpactDetail": "Object dbo.YWAF_request_response_log.response uses deprecated data type TEXT, IMAGE or NTEXT which will be discontinued for future versions of SQL Server. For more details, please see: Line 4, Column 5.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "CaseManagement",
+      "SizeMB": 82944.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "MOSL_Reporting",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "MOSL_Reporting_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "MOSL_Reporting",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "MOSL_Reporting_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "MOSL_Reporting",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "MOSL_Reporting_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "MOSL_Reporting",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "MOSL_Reporting_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "MOSL_Reporting",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "MOSL_Reporting_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [MOSL_Reporting_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\MOSL_Reporting_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "MOSL_Reporting",
+      "SizeMB": 62464.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "PropertyLookup",
+      "SizeMB": 54272.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ReportManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ReportManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ReportManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ReportManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ReportManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ReportManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ReportManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ReportManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ReportManagement",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ReportManagement_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ReportManagement_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ReportManagement_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "ReportManagement",
+      "SizeMB": 2560.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [J:\\SQLData\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [J:\\SQLLogs\\MSSQL13.YORREPQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "ywadmin",
+      "SizeMB": 768.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP3B\\YORREPQA"
+    }
+  ],
+  "ServerInstances": [
+    {
+      "ServerName": "BillQaRep3A\\YorRepQa",
+      "Version": "13.0.7095.1",
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "Category": "FeatureParity",
+          "Severity": "Error",
+          "FeatureParityCategory": "UnsupportedFeature",
+          "RuleId": "dfbd7782-692a-4412-8785-605c7871c7ee",
+          "Title": "Data Quality Services (DQS)",
+          "Impact": "DQS is no longer supported",
+          "Recommendation": "Data Quality Services (DQS) is removed in SQL Server 2025 (170).",
+          "MoreInfo": "Refer to the <a href=\"https://aka.ms/SQL2025-discontinued-services-features\"\">discontinued services and deprecated features</a>",
+          "ImpactedObjects": []
+        }
+      ]
+    }
+  ],
+  "SourcePlatform": "SqlOnPrem",
+  "Status": "Completed",
+  "StartedOn": "2026-09-15T14:21:32.1331685+00:00",
+  "EndedOn": "2026-09-15T14:24:24.7968415+00:00",
+  "EvaluateFeatureRecommendations": false,
+  "EvaluateCompatibilityIssues": true,
+  "EvaluateFeatureParity": true,
+  "TargetPlatform": "SqlServerWindows2025",
+  "DmaVersion": {}
+}

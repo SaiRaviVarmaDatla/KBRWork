@@ -1,0 +1,440 @@
+{
+  "Name": "BillQaSql4A_ExceptBilling",
+  "Databases": [
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "Billing_Analysis",
+      "SizeMB": 378880.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "Billing_BBC_Extract_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [Billing_BBC_Extract_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\BBC_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "Billing_BBC_Extract_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [Billing_BBC_Extract_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\BBC_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "Billing_BBC_Extract_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [Billing_BBC_Extract_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\BBC_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "Billing_BBC_Extract_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [Billing_BBC_Extract_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\BBC_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "Billing_BBC_Extract_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [Billing_BBC_Extract_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\BBC_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "Billing_BBC_Extract",
+      "SizeMB": 15336.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "Billing_Control",
+      "SizeMB": 2560.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "Billing_MIS",
+      "SizeMB": 75600.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [],
+      "Name": "MISStaging",
+      "SizeMB": 27920.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    },
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "BreakingChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00338",
+          "Title": "CLR assemblies marked as SAFE or EXTERNAL_ACCESS are considered UNSAFE",
+          "Impact": "CLR Strict Security mode is introduced in SQL Server 2017. This mode is enabled by default and introduces breaking changes for databases containing user-defined CLR assemblies marked either SAFE or EXTERNAL_ACCESS.",
+          "Recommendation": "<p>When CLR Strict Security is enabled, attempting to create an unsigned assembly will cause an error. Use the following steps to create a signed assembly: </p>\r\n<ol>\r\n<li>Create a key pair file. For more information, see How to: Create a Public-Private Key Pair.</li>\r\n<li>Compile the module and sign it using the key file. For more information, see How to: Sign an Assembly with a Strong Name.</li>\r\n<li>Create an asymmetric key in the master database from the key file \r\nCREATE ASYMMETRIC KEY MyStrongNameKey FROM FILE = 'C:\\MyStrongNameKey.snk'</li>\r\n<li>Create a login from the asymmetric key \r\nCREATE LOGIN MyStrongNameKeyLogin FROM ASYMMETRIC KEY MyStrongNameKey</li>\r\n<li>Grant UNSAFE ASSEMBLY permission to the login \r\nGRANT UNSAFE ASSEMBLY TO MyStrongNameKeyLogin</li>\r\n<li>Now users with CREATE ASSEMBLY permissions can create assemblies signed by the key</li>\r\n</ol>\r\nWe recommend signing assemblies by following the steps outlined above. However, you can alternatively do one of the following: \r\n<ul>\r\n<li>Set the Trustworthy Property of the database to ON and grant UNSAFE ASSEMBLY permission to the login that owns the database. This is not recommended because marking a database as Trustworthy can allow malicious assemblies to impact resources outside the database. For more information, see Guidelines for using the TRUSTWORTHY database setting in SQL Server. </li>\r\n<li>Disable CLR Strict Security by using sp_configure. This is not recommended because assemblies marked SAFE or EXTERNAL_ACCESS may enable elevation of privilege from a database user to a sysadmin.\r\nsp_configure 'show advanced options', 1 \r\nGO \r\nsp_configure 'clr strict security', 0 \r\nGO \r\nRECONFIGURE \r\nGO</li>\r\n</ol>\r\n</p>",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "clr_buildwkb",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_buildwkb]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "clr_hexproc",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[clr_hexproc]' with PERMISSION_SET = 'Safe' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "YWSQLCLR",
+              "ObjectType": "Assembly",
+              "ImpactDetail": "Assembly '[YWSQLCLR]' with PERMISSION_SET = 'ExternalAccess' cannot be migrated. For more details, please see: Line 1, Column 1.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [L:\\SQLData\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [L:\\SQLData\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel150",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [L:\\SQLData\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel160",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [L:\\SQLData\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel170",
+          "Category": "Compatibility",
+          "Severity": "Warning",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00003",
+          "Title": "Turn on autogrowth for all data and log files after the migration is completed on the target server.",
+          "Impact": "You may experience transaction failures when database data or log files run out of space.",
+          "Recommendation": "Assessment detected data or log files on your source SQL Server that do not have autogrowth enabled. New and enhanced features require additional disk space for user databases and the tempdb system database. Consider enabling the autogrowth setting for all data and log files on your target SQL Server instance after the migration is completed.\n\n \nWhile you still set autogrowth ON, for a managed production system, you must consider autogrowth to be merely a contingency for unexpected growth. Do not manage your data and log growth on a day-to-day basis with autogrowth.",
+          "MoreInfo": "Verify autogrowth is turned on for all data and log files during the upgrade process. (https://go.microsoft.com/fwlink/?LinkId=798526)",
+          "ImpactedObjects": [
+            {
+              "Name": "ywadmin",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin] [L:\\SQLData\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin.mdf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            },
+            {
+              "Name": "ywadmin_log",
+              "ObjectType": "SqlFile",
+              "ImpactDetail": "Log file [ywadmin_log] [L:\\SQLLogs\\MSSQL13.YORDWQA\\MSSQL\\Data\\ywadmin_log.ldf] does not use autogrowth option.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "ywadmin",
+      "SizeMB": 768.0,
+      "ServerVersion": "13.0.7095.1",
+      "ServerEdition": "Enterprise Edition: Core-based Licensing (64-bit)",
+      "CompatibilityLevel": "CompatLevel130",
+      "ServerName": "BILLQAREP4B\\YORDWQA"
+    }
+  ],
+  "ServerInstances": [
+    {
+      "ServerName": "BillQARep4A\\YorDwQA",
+      "Version": "13.0.7095.1",
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "Category": "FeatureParity",
+          "Severity": "Error",
+          "FeatureParityCategory": "UnsupportedFeature",
+          "RuleId": "dfbd7782-692a-4412-8785-605c7871c7ee",
+          "Title": "Data Quality Services (DQS)",
+          "Impact": "DQS is no longer supported",
+          "Recommendation": "Data Quality Services (DQS) is removed in SQL Server 2025 (170).",
+          "MoreInfo": "Refer to the <a href=\"https://aka.ms/SQL2025-discontinued-services-features\"\">discontinued services and deprecated features</a>",
+          "ImpactedObjects": []
+        }
+      ]
+    }
+  ],
+  "SourcePlatform": "SqlOnPrem",
+  "Status": "Completed",
+  "StartedOn": "2026-09-15T14:30:22.3281616+00:00",
+  "EndedOn": "2026-09-15T14:31:36.8929227+00:00",
+  "EvaluateFeatureRecommendations": false,
+  "EvaluateCompatibilityIssues": true,
+  "EvaluateFeatureParity": true,
+  "TargetPlatform": "SqlServerWindows2025",
+  "DmaVersion": {}
+}
